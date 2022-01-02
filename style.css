@@ -3,6 +3,26 @@
 }
 body{
     background-color:black;
-    wid
-
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+}
+#game-board{
+    background-color: #ccc;
+    height: 100vmin;
+    width: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(21,1fr);
+    grid-template-rows: repeat(21,1fr);
+    
+}
+.snake{
+ background-color: hsl(200, 100%, 50%);
+ border: .2em solid black;
+}
+.food{
+    background-color:hsl(50, 100%, 50%)
 }
