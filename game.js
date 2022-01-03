@@ -1,15 +1,25 @@
 // ....Univesal declaration and others......
 let lastRendarTime = 0
-let SNAKE_SPEED = 2
+let SNAKE_SPEED = 1
 function main(currentTime){
   window.requestAnimationFrame(main)
   const secondsSinceLastRendar = (currentTime - lastRendarTime) / 1000
   if(secondsSinceLastRendar < 1 / SNAKE_SPEED) return
   console.log("rendar")
   lastRendarTime = currentTime
-}
 
+
+  update()
+  draw()
+}
 window.requestAnimationFrame(main)
+
+function update(){
+ console.log("hay this is update")
+}
+function draw(){
+ console.log("it's draw")
+}
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
