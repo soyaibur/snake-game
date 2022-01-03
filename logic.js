@@ -1,4 +1,15 @@
 // ....Univesal declaration and others......
+let lastRendarTime = 0
+let SNAKE_SPEED = 2
+function main(currentTime){
+  window.requestAnimationFrame(main)
+  const secondsSinceLastRendar = (currentTime - lastRendarTime) / 1000
+  if(secondsSinceLastRendar < 1 / SNAKE_SPEED) return
+  console.log("rendar")
+  lastRendarTime = currentTime
+}
+
+window.requestAnimationFrame(main)
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -22,6 +33,8 @@ function printOut(text){
     div.innerHTML = text
     document.body.appendChild(div)
 }
+
+
 // addEventListener('click',()=>{
 //     alert("this is working")
 // })
