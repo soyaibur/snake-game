@@ -1,11 +1,24 @@
 // ....Univesal declaration and others......
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from './snake.js' 
+
 let lastRendarTime = 0
-let SNAKE_SPEED = 1
+const gameBoard = document.getElementById('game-board')
+
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+// .....All Element Selection will be undernith here...........
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// .....All EventListener go undernith here...........
+// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// ......All Function will go here undernith..........
 function main(currentTime){
   window.requestAnimationFrame(main)
   const secondsSinceLastRendar = (currentTime - lastRendarTime) / 1000
   if(secondsSinceLastRendar < 1 / SNAKE_SPEED) return
-  console.log("rendar")
   lastRendarTime = currentTime
 
 
@@ -15,26 +28,14 @@ function main(currentTime){
 window.requestAnimationFrame(main)
 
 function update(){
- console.log("hay this is update")
+  updateSnake()
 }
+
 function draw(){
- console.log("it's draw")
+  gameBoard.innerHTML = ''
+ drawSnake(gameBoard)
 }
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
-// .....All Element Selection will be undernith here...........
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-// .....All EventListener go undernith here...........
-// ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-// ......All Function will go here undernith..........
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 //All code will be deleted here.............
@@ -45,7 +46,7 @@ function printOut(text){
 }
 
 
-// addEventListener('click',()=>{
+// gameBoard.addEventListener('click',()=>{
 //     alert("this is working")
 // })
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
