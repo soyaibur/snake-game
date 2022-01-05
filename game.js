@@ -5,9 +5,6 @@ let lastRendarTime = 0
 const gameBoard = document.getElementById('game-board')
 
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
 // .....All Element Selection will be undernith here...........
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
