@@ -1,5 +1,6 @@
 // ....Univesal declaration and others......
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from './snake.js' 
+import {update as updateFood, draw as drawFood } from './food.js'
 
 let lastRendarTime = 0
 const gameBoard = document.getElementById('game-board')
@@ -17,23 +18,28 @@ function main(currentTime){
   const secondsSinceLastRendar = (currentTime - lastRendarTime) / 1000
   if(secondsSinceLastRendar < 1 / SNAKE_SPEED) return
   lastRendarTime = currentTime
-
-
   update()
   draw()
 }
 window.requestAnimationFrame(main)
 
-function update(){
+// this two function are for running full game
+function update(){ //No.1 for updating code
   updateSnake()
 }
 
-function draw(){
+function draw(){ //No.2 for Drawing snake and food.
   gameBoard.innerHTML = ''
- drawSnake(gameBoard)
+  drawSnake(gameBoard)
+  drawFood(gameBoard)
 }
-
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+
 
 //All code will be deleted here.............
 function printOut(text){
