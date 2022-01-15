@@ -18,6 +18,7 @@ function main(currentTime){
   const secondsSinceLastRendar = (currentTime - lastRendarTime) / 1000
   if(secondsSinceLastRendar < 1 / SNAKE_SPEED) return
   lastRendarTime = currentTime
+  
   update()
   draw()
 }
@@ -26,6 +27,7 @@ window.requestAnimationFrame(main)
 // this two function are for running full game
 function update(){ //No.1 for updating code
   updateSnake()
+  updateFood()
 }
 
 function draw(){ //No.2 for Drawing snake and food.

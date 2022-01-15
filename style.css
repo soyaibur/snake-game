@@ -21,8 +21,13 @@ body{
 }
 .snake{
  background-color: hsl(200, 100%, 50%);
- border: .05em solid black;
+ border: .02vmin solid black;
 }
 .food{
-    background-color:hsl(50, 100%, 50%)
+    background-color:hsl(50, 70%, 50%);
+    border: .02vmin solid black;
+    transition: 350ms ease-in;
+}
+.food:hover{
+    transform: scale(1.3);
 }

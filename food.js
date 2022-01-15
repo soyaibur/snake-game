@@ -1,6 +1,14 @@
-let food = {x:1, y:1}
-export function update(){
+import {onSnake, expandSnake} from './snake.js'
 
+let food = {x:7, y:7}
+const EXPANSION_RATE = 1
+
+
+export function update(){
+ if(onSnake(food)){
+     expandSnake(EXPANSION_RATE)
+     food = {x:20, y:10}
+ }
 }
 export function draw(gameBoard){
     const foodElement = document.createElement('div')
