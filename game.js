@@ -1,5 +1,5 @@
 // ....Univesal declaration and others......
-import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead } from './snake.js' 
+import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection } from './snake.js' 
 import {update as updateFood, draw as drawFood } from './food.js'
 import {outSideGrid} from './grid.js'
 
@@ -43,7 +43,7 @@ function draw(){ //No.2 for Drawing snake and food.
 }
 
 function checkDeath(){
-  gameOver = outSideGrid(getSnakeHead()) || snakeIntersection()
+  gameOver = outSideGrid(getSnakeHead())  || snakeIntersection()
 }
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
