@@ -43,7 +43,7 @@ function draw(){ //No.2 for Drawing snake and food.
 }
 
 function checkDeath(){
-  gameOver = outSideGrid(getSnakeHead()) || snakeIntersection()
+  gameOver = outSideGrid(getSnakeHead())  || snakeIntersection()
 }
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
